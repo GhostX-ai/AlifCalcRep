@@ -110,6 +110,7 @@
             this.SqrtBtn.TabIndex = 4;
             this.SqrtBtn.Text = "sqrt";
             this.SqrtBtn.UseVisualStyleBackColor = true;
+            this.SqrtBtn.Click += new System.EventHandler(this.SqrtBtn_Click);
             // 
             // ProcBtn
             // 
@@ -120,6 +121,7 @@
             this.ProcBtn.TabIndex = 5;
             this.ProcBtn.Text = "%";
             this.ProcBtn.UseVisualStyleBackColor = true;
+            this.ProcBtn.Click += new System.EventHandler(this.ProcBtn_Click);
             // 
             // OnOneBtn
             // 
@@ -130,6 +132,7 @@
             this.OnOneBtn.TabIndex = 6;
             this.OnOneBtn.Text = "1/x";
             this.OnOneBtn.UseVisualStyleBackColor = true;
+            this.OnOneBtn.Click += new System.EventHandler(this.OnOneBtn_Click);
             // 
             // ResultBtn
             // 
@@ -140,6 +143,7 @@
             this.ResultBtn.TabIndex = 7;
             this.ResultBtn.Text = "=";
             this.ResultBtn.UseVisualStyleBackColor = true;
+            this.ResultBtn.Click += new System.EventHandler(this.ResultBtn_Click);
             // 
             // DevideBtn
             // 
@@ -162,7 +166,6 @@
             this.MultiplyBtn.Text = "*";
             this.MultiplyBtn.UseVisualStyleBackColor = true;
             this.MultiplyBtn.Click += new System.EventHandler(this.Function_Click);
-
             // 
             // MinusBtn
             // 
@@ -370,7 +373,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(325, 219);
             this.Controls.Add(this.FunctionLbl);
             this.Controls.Add(this.MpBtn);

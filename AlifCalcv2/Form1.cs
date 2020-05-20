@@ -20,6 +20,7 @@ namespace AlifCalcv2
         static double x = 0;
         static double y = 0;
         static char function = ' ';
+        static bool wasResultClicked = false;
 
         private void Num_Click(object sender, EventArgs e)
         {
@@ -58,19 +59,27 @@ namespace AlifCalcv2
         private void Function_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            function = char.Parse(btn.Text);
-            FunctionLbl.Text = function.ToString();
-            if (x == 0)
+            if (x == 0 && !wasResultClicked)
             {
                 x = double.Parse(number);
                 number = "";
             }
-            else
+            else if (!wasResultClicked)
             {
-                y = double.Parse(number);
+                try
+                {
+                    y = double.Parse(number);
+                }
+                catch (Exception ex)
+                {
+
+                }
                 number = "";
                 technique();
             }
+            function = char.Parse(btn.Text);
+            FunctionLbl.Text = function.ToString();
+            wasResultClicked = false;
         }
 
         private void technique()
@@ -98,9 +107,68 @@ namespace AlifCalcv2
                     }
                     break;
             }
-            y = 0;
             function = ' ';
             PanelTBox.Text = x.ToString();
+        }
+
+        private void ResultBtn_Click(object sender, EventArgs e)
+        {
+            wasResultClicked = true;
+            if (function != ' ')
+            {
+                try
+                {
+                    y = double.Parse(number);
+                }
+                catch (Exception ex)
+                {
+
+                }
+                number = "";
+                technique();
+            }
+            else
+            {
+                y = 0;
+                number = "";
+                PanelTBox.Text = x.ToString();
+            }
+        }
+
+        private void SqrtBtn_Click(object sender, EventArgs e)
+        {
+            if (x == 0)
+            {
+                x = Math.Sqrt(double.Parse(number));
+                PanelTBox.Text = x.ToString();
+            }
+            else
+            {
+                y = Math.Sqrt(double.Parse(number));
+                PanelTBox.Text = y.ToString();
+            }
+            number = "";
+        }
+
+        private void OnOneBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                x = 1 / double.Parse(number);
+                number = "";
+                PanelTBox.Text = x.ToString();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void ProcBtn_Click(object sender, EventArgs e)
+        {
+            y = x / 100 * double.Parse(number);
+            number = "";
+            PanelTBox.Text = y.ToString();
         }
     }
 }
