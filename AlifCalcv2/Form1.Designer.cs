@@ -328,6 +328,7 @@
             this.McBtn.TabIndex = 24;
             this.McBtn.Text = "MC";
             this.McBtn.UseVisualStyleBackColor = true;
+            this.McBtn.Click += new System.EventHandler(this.McBtn_Click);
             // 
             // MsBtn
             // 
@@ -338,6 +339,7 @@
             this.MsBtn.TabIndex = 25;
             this.MsBtn.Text = "MS";
             this.MsBtn.UseVisualStyleBackColor = true;
+            this.MsBtn.Click += new System.EventHandler(this.MsBtn_Click);
             // 
             // MmBtn
             // 
@@ -348,6 +350,7 @@
             this.MmBtn.TabIndex = 25;
             this.MmBtn.Text = "M-";
             this.MmBtn.UseVisualStyleBackColor = true;
+            this.MmBtn.Click += new System.EventHandler(this.MmBtn_Click);
             // 
             // MpBtn
             // 
@@ -358,6 +361,7 @@
             this.MpBtn.TabIndex = 25;
             this.MpBtn.Text = "M+";
             this.MpBtn.UseVisualStyleBackColor = true;
+            this.MpBtn.Click += new System.EventHandler(this.MpBtn_Click);
             // 
             // FunctionLbl
             // 

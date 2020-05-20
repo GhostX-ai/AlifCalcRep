@@ -21,6 +21,7 @@ namespace AlifCalcv2
         static double y = 0;
         static char function = ' ';
         static bool wasResultClicked = false;
+        static double memory = 0;
 
         private void Num_Click(object sender, EventArgs e)
         {
@@ -169,6 +170,32 @@ namespace AlifCalcv2
             y = x / 100 * double.Parse(number);
             number = "";
             PanelTBox.Text = y.ToString();
+        }
+
+        private void McBtn_Click(object sender, EventArgs e)
+        {
+            memory = 0;
+            PanelTBox.Text = "Memory has been cleaned successfully!";
+        }
+
+        private void MsBtn_Click(object sender, EventArgs e)
+        {
+            PanelTBox.Text = memory.ToString();
+            number = memory.ToString();
+        }
+
+        private void MpBtn_Click(object sender, EventArgs e)
+        {
+            PanelTBox.Text = "0";
+            memory += double.Parse(number);
+            number = "";
+        }
+
+        private void MmBtn_Click(object sender, EventArgs e)
+        {
+            PanelTBox.Text = "0";
+            memory -= double.Parse(number);
+            number = "";
         }
     }
 }
