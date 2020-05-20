@@ -51,12 +51,12 @@
             this.Num1Btn = new System.Windows.Forms.Button();
             this.DotBtn = new System.Windows.Forms.Button();
             this.Num0Btn = new System.Windows.Forms.Button();
-            this.PmBtn = new System.Windows.Forms.Button();
             this.McBtn = new System.Windows.Forms.Button();
             this.MsBtn = new System.Windows.Forms.Button();
             this.MmBtn = new System.Windows.Forms.Button();
             this.MpBtn = new System.Windows.Forms.Button();
             this.FunctionLbl = new System.Windows.Forms.Label();
+            this.PlusMinusBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // PanelTBox
@@ -309,16 +309,6 @@
             this.Num0Btn.UseVisualStyleBackColor = true;
             this.Num0Btn.Click += new System.EventHandler(this.Num_Click);
             // 
-            // PmBtn
-            // 
-            this.PmBtn.ForeColor = System.Drawing.Color.Navy;
-            this.PmBtn.Location = new System.Drawing.Point(67, 184);
-            this.PmBtn.Name = "PmBtn";
-            this.PmBtn.Size = new System.Drawing.Size(45, 30);
-            this.PmBtn.TabIndex = 23;
-            this.PmBtn.Text = "+/-";
-            this.PmBtn.UseVisualStyleBackColor = true;
-            // 
             // McBtn
             // 
             this.McBtn.ForeColor = System.Drawing.Color.Red;
@@ -372,6 +362,17 @@
             this.FunctionLbl.Size = new System.Drawing.Size(0, 31);
             this.FunctionLbl.TabIndex = 26;
             // 
+            // PlusMinusBtn
+            // 
+            this.PlusMinusBtn.ForeColor = System.Drawing.Color.Navy;
+            this.PlusMinusBtn.Location = new System.Drawing.Point(67, 184);
+            this.PlusMinusBtn.Name = "PlusMinusBtn";
+            this.PlusMinusBtn.Size = new System.Drawing.Size(45, 30);
+            this.PlusMinusBtn.TabIndex = 27;
+            this.PlusMinusBtn.Text = "+/-";
+            this.PlusMinusBtn.UseVisualStyleBackColor = true;
+            this.PlusMinusBtn.Click += new System.EventHandler(this.PlusMinusBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,12 +380,12 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(325, 219);
+            this.Controls.Add(this.PlusMinusBtn);
             this.Controls.Add(this.FunctionLbl);
             this.Controls.Add(this.MpBtn);
             this.Controls.Add(this.MmBtn);
             this.Controls.Add(this.MsBtn);
             this.Controls.Add(this.McBtn);
-            this.Controls.Add(this.PmBtn);
             this.Controls.Add(this.Num0Btn);
             this.Controls.Add(this.DotBtn);
             this.Controls.Add(this.Num1Btn);
@@ -441,12 +442,12 @@
         private System.Windows.Forms.Button Num1Btn;
         private System.Windows.Forms.Button DotBtn;
         private System.Windows.Forms.Button Num0Btn;
-        private System.Windows.Forms.Button PmBtn;
         private System.Windows.Forms.Button McBtn;
         private System.Windows.Forms.Button MsBtn;
         private System.Windows.Forms.Button MmBtn;
         private System.Windows.Forms.Button MpBtn;
         private System.Windows.Forms.Label FunctionLbl;
+        private System.Windows.Forms.Button PlusMinusBtn;
     }
 }
 

@@ -197,5 +197,29 @@ namespace AlifCalcv2
             memory -= double.Parse(number);
             number = "";
         }
+
+        private void PlusMinusBtn_Click(object sender, EventArgs e)
+        {
+            double q = double.Parse(number);
+            if (q > 0)
+            {
+                char[] z = number.ToCharArray();
+                number = "-";
+                for (int i = 0; i < z.Length; i++)
+                {
+                    number += z[i];
+                }
+            }
+            else if (q < 0)
+            {
+                char[] z = number.ToCharArray();
+                number = "";
+                for (int i = 1; i < z.Length; i++)
+                {
+                    number += z[i];
+                }
+            }
+            PanelTBox.Text = number;
+        }
     }
 }
